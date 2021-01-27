@@ -9,6 +9,7 @@ int main()
    unsigned long long int iCopie;
    for (unsigned long long int i=1;i<=ULLONG_MAX;i++)
    {
+      suma = 0;
       iCopie = i;
       while (iCopie!=0)
       {
@@ -17,7 +18,6 @@ int main()
       }
       if (suma==i)
          cout<<i<<'\n';
-      suma = 0;
    }
    return 0;
 }

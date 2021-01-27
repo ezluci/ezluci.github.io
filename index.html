@@ -1,5 +1,8 @@
 <html>
    <head>
+        <title>Pagina principală | ezluci.github.io</title>
+        <meta name="description" content="Un site cu diferite resurse despre diferite curiozități în matematică sau info. Aici poți găsi soluții la unele probleme pe care este posibil să le întâmpini.">
+        <meta name="keywords" content="matematică, informatică, ezluci, mate, info, română, interesant">
         <style>
             body
             {
@@ -43,31 +46,36 @@
 
         <script>
             function Search() {
-              // Declare variables
-              var input, filter, ul, li, a, i, txtValue;
-              input = document.getElementById('myInput');
-              filter = input.value.toUpperCase();
-              ul = document.getElementById("myUL");
-              li = ul.getElementsByTagName('li');
-            
-              // Loop through all list items, and hide those who don't match the search query
-              for (i = 0; i < li.length; i++) {
-                a = li[i].getElementsByTagName("a")[0];
-                txtValue = a.textContent || a.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                  li[i].style.display = "";
-                } else {
-                  li[i].style.display = "none";
+                // Declare variables
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById('myInput');
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName('li');
+              
+                // Loop through all list items, and hide those who don't match the search query
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1)
+                    {
+                        li[i].style.display = "";
+                    }
+                    else
+                    {
+                        li[i].style.display = "none";
+                    }
                 }
-              }
             }
             </script>
     </head>
     <body>
-        <input type="text" id="myInput" onkeyup="Search()" placeholder="Search...">
-
+        <input type="text" id="myInput" onkeyup="Search()" placeholder="Caută...">
+        
+        <h1>ezluci.github.io - Un site cu diferite resurse despre diferite curiozități în matematică sau informatică.</h1>
         <ul id="myUL">
             <li><a href="diagonale_poligon/index.html">Diagonalele unui poligon convex</a></li>
+            <li><a href="numar_triunghiular/index.html">Număr triunghiular</a></li>
             <li><a href="numere_munchhausen/index.html">Numerele Münchhausen (numerele la care suma dintre ~fiecare cifră la puterea cifrei respective~ este egală cu numărul)</a></li>
             <li><a href="patrat_magic/index.html">Pătrat magic</a></li>
         </ul>
@@ -77,4 +85,3 @@
         <a href="https://github.com/ezluci">wanna see my profile on github?</a>
     </body>
 </html>
-
