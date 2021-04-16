@@ -3,7 +3,7 @@
         <title>Pagina principală | ezluci.github.io</title>
         <meta name="description" content="Un site cu diferite resurse despre diferite curiozități în matematică sau info. Aici poți găsi soluții la unele probleme pe care este posibil să le întâmpini.">
         <meta name="keywords" content="matematică, informatică, ezluci, mate, info, română, interesant">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/css/style.css">
         <style>
             #myInput {
             background-image: url('/css/searchicon.png'); /* Add a search icon to input */
@@ -21,17 +21,6 @@
             list-style-type: none;
             padding: 0;
             margin: 0;
-            }
-
-            #myUL li a {
-            /*border: 1px solid #ddd; /* Add a border to all links */
-            /*margin-top: -1px; /* Prevent double borders */
-            /*background-color: #f6f6f6; /* Grey background color */
-            /*padding: 12px; /* Add some padding */
-            /*text-decoration: none; /* Remove default text underline */
-            /*font-size: 18px; /* Increase the font-size */
-            /*color: black; /* Add a black text color */
-            /*display: block; /* Make it into a block element to fill the whole list */
             }
 
             #myUL li a:hover:not(.header) {
@@ -62,12 +51,22 @@
                     }
                 }
             }
-            </script>
+        </script>
+        <script type="text/javascript" src="/js/func_SwitchDarkMode.js"></script>
     </head>
     <body>
-        <input type="text" id="myInput" onkeyup="Search()" placeholder="Caută...">
-        
-        <h1>ezluci.github.io - Un site cu diferite resurse despre diferite curiozități în matematică sau informatică.</h1>
+        <div>
+            <a href="/">
+                <img src="/ezluci.png" width="10%">
+            </a>
+            <input type="text" id="myInput" onkeyup="Search()" placeholder="Caută...">
+        </div>
+        <div>
+            <a id="textSwitchDarkMode" href="javascript:SwitchDarkMode()"></a>
+        </div>
+        <script type="text/javascript" src="/js/setLightOrDarkMode.js"></script>
+
+        <h1>ezluci.github.io - Un site cu diferite resurse despre diferite curiozități din matematică și informatică.</h1>
         <ul id="myUL">
             <li><a href="diagonale_poligon/index.html">Diagonalele unui poligon convex</a></li>
             <li><a href="numar_triunghiular/index.html">Număr triunghiular</a></li>
