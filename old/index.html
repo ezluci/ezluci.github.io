@@ -1,0 +1,83 @@
+<html>
+   <head>
+        <title>Pagina principală | ezluci.github.io</title>
+        <meta name="description" content="Un site cu diferite resurse despre diferite curiozități în matematică sau info. Aici poți găsi soluții la unele probleme pe care este posibil să le întâmpini.">
+        <meta name="keywords" content="matematică, informatică, ezluci, mate, info, română, interesant">
+        <link rel="stylesheet" href="/css/style.css">
+        <style>
+            #myInput {
+            background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+            background-position: 10px 12px; /* Position the search icon */
+            background-repeat: no-repeat; /* Do not repeat the icon image */
+            /*width: 100%*/
+            font-size: 16px; /* Increase font-size */
+            padding: 12px 20px 12px 40px; /* Add some padding */
+            border: 1px solid #ddd; /* Add a grey border */
+            margin-bottom: 12px; /* Add some space below the input */
+            }
+
+            #myUL {
+            /* Remove default list styling */
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            }
+
+            #myUL li a:hover:not(.header) {
+            background-color: #eee; /* Add a hover effect to all links, except for headers */
+            }
+        </style>
+
+        <script>
+            function Search() {
+                // Declare variables
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById('myInput');
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName('li');
+              
+                // Loop through all list items, and hide those who don't match the search query
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1)
+                    {
+                        li[i].style.display = "";
+                    }
+                    else
+                    {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
+        <script type="text/javascript" src="/js/func_SwitchDarkMode.js"></script>
+    </head>
+    <body>
+        <div>
+            <a href="/">
+                <img src="/ezluci.png" width="10%">
+            </a>
+            <input type="text" id="myInput" onkeyup="Search()" placeholder="Caută...">
+        </div>
+        <div>
+            <a id="textSwitchDarkMode" href="javascript:SwitchDarkMode()"></a>
+        </div>
+        <script type="text/javascript" src="/js/setLightOrDarkMode.js"></script>
+
+        <h1>ezluci.github.io - Un site cu diferite resurse despre diferite curiozități din matematică și informatică.</h1>
+        <ul id="myUL">
+            <li><a href="diagonale_poligon/index.html">Diagonalele unui poligon convex</a></li>
+            <li><a href="numar_triunghiular/index.html">Număr triunghiular</a></li>
+            <li><a href="numere_munchhausen/index.html">Numerele Münchhausen (numerele la care suma dintre ~fiecare cifră la puterea cifrei respective~ este egală cu numărul)</a></li>
+            <li><a href="patrat_magic/index.html">Pătrat magic</a></li>
+            <li><a href="suma_patratelor_nr_1_la_n/index.html">Suma pătratelor de la 1 la n</a></li>
+        </ul>
+        <br><br><br><br>
+        <p>hello. im still working on this site. </p>
+        <p>i made it using github sites</p>
+        <a href="https://github.com/ezluci">wanna see my profile on github?</a>
+    </body>
+</html>
+
